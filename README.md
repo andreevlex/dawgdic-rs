@@ -9,12 +9,12 @@ DAWGs in your favourite scripting language via FFI.
 There are several necessary steps to compile and install libdawgdic into
 your system.
 
-1. Clone it with `git clone https://github.com/dmchk/libdawgdic.git`.
-2. Prepare the build directory with `mkdir libdawgdic/build`.
-3. Go to the build directory with `cd libdawgdic/build`.
-4. Configure it with `cmake ..`.
-5. Compile it with `make`.
-6. Install it with `sudo make install`.
+1. Clone it with `git clone https://github.com/dmchk/libdawgdic.git`
+2. Prepare the build directory with `mkdir libdawgdic/build`
+3. Go to the build directory with `cd libdawgdic/build`
+4. Configure it with `cmake ..`
+5. Compile it with `make`
+6. Install it with `sudo make install`
 7. Reconfigure your runtime bindings with `sudo ldconfig`, if necessary.
 
 After that you may consider two new files in your system:
