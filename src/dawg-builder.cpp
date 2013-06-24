@@ -29,8 +29,16 @@ bool dawgdic_builder_insert3(const void *builder, const char *string, const size
     return BUILDER(builder)->Insert(string, length, record);
 }
 
+size_t dawgdic_builder_size(const void *builder) {
+  return BUILDER(builder)->size();
+}
+
 bool dawgdic_builder_finish(const void *builder, const void *dawg) {
   return BUILDER(builder)->Finish(DAWG(dawg));
+}
+
+void dawgdic_builder_clear(const void *builder) {
+  BUILDER(builder)->Clear();
 }
 
 }

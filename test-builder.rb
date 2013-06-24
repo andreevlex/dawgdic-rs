@@ -19,7 +19,9 @@ module Dawgdic
   attach_function :dawgdic_builder_insert, [:pointer, :string], :bool
   attach_function :dawgdic_builder_insert2, [:pointer, :string, :int], :bool
   attach_function :dawgdic_builder_insert3, [:pointer, :string, :uint, :int], :bool
+  attach_function :dawgdic_builder_size, [:pointer], :uint
   attach_function :dawgdic_builder_finish, [:pointer, :pointer], :bool
+  attach_function :dawgdic_builder_clear, [:pointer], :void
 
   attach_function :dawgdic_dictionary_new, [], :pointer
   attach_function :dawgdic_dictionary_free, [:pointer], :void
@@ -36,12 +38,22 @@ module Dawgdic
 end
 
 builder = Dawgdic.dawgdic_builder_new
-Dawgdic.dawgdic_builder_insert(builder, 'zaebis')
-Dawgdic.dawgdic_builder_insert2(builder, 'zaebis228', 228)
-Dawgdic.dawgdic_builder_insert3(builder, 'zaebis228359', 12, 359)
-Dawgdic.dawgdic_builder_insert3(builder, 'zaebis228359', 12, 228)
-Dawgdic.dawgdic_builder_insert3(builder, 'zaebis228359', 12, 359)
-Dawgdic.dawgdic_builder_insert3(builder, 'zaebis228359', 12, 359)
+p Dawgdic.dawgdic_builder_size(builder)
+p Dawgdic.dawgdic_builder_insert(builder, 'zaebis')
+p Dawgdic.dawgdic_builder_insert2(builder, 'zaebis228', 228)
+p Dawgdic.dawgdic_builder_insert3(builder, 'zaebis228359', 12, 359)
+p Dawgdic.dawgdic_builder_insert3(builder, 'zaebis228359', 12, 228)
+p Dawgdic.dawgdic_builder_insert3(builder, 'zaebis228359', 12, 359)
+p Dawgdic.dawgdic_builder_insert3(builder, 'zaebis228359', 12, 359)
+Dawgdic.dawgdic_builder_clear(builder)
+p Dawgdic.dawgdic_builder_size(builder)
+p Dawgdic.dawgdic_builder_insert(builder, 'zaebis')
+p Dawgdic.dawgdic_builder_insert2(builder, 'zaebis228', 228)
+p Dawgdic.dawgdic_builder_insert3(builder, 'zaebis228359', 12, 359)
+p Dawgdic.dawgdic_builder_insert3(builder, 'zaebis228359', 12, 228)
+p Dawgdic.dawgdic_builder_insert3(builder, 'zaebis228359', 12, 359)
+p Dawgdic.dawgdic_builder_insert3(builder, 'zaebis228359', 12, 359)
+p Dawgdic.dawgdic_builder_size(builder)
 
 dawg = Dawgdic.dawgdic_dawg_new
 Dawgdic.dawgdic_builder_finish(builder, dawg)

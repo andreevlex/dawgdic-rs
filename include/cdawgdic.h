@@ -11,7 +11,9 @@ void dawgdic_builder_free(void *);
 bool dawgdic_builder_insert(const void *, const char *);
 bool dawgdic_builder_insert2(const void *, const char *, const int);
 bool dawgdic_builder_insert3(const void *, const char *, const size_t, const int);
+size_t dawgdic_builder_size(const void *);
 bool dawgdic_builder_finish(const void *, const void *);
+void dawgdic_builder_clear(const void *);
 
 /* dictionary */
 void *dawgdic_dictionary_new();
