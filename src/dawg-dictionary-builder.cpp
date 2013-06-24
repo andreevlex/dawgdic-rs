@@ -7,7 +7,7 @@ using namespace dawgdic;
 
 extern "C" {
 
-#include "dawgdic/cdawgdic.h"
+#include "cdawgdic.h"
 
 bool dawgdic_dictionary_builder_build(const void *dawg, const void *dictionary) {
     return DictionaryBuilder::Build(*DAWG(dawg), DICTIONARY(dictionary));

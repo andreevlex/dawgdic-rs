@@ -24,5 +24,5 @@ install(TARGETS dawgdic
   ARCHIVE DESTINATION lib
 )
 
-install(DIRECTORY include/dawgdic
-  DESTINATION include)
+install(DIRECTORY include/
+  DESTINATION include/dawgdic)

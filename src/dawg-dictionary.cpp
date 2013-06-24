@@ -13,7 +13,7 @@ using std::ofstream;
 
 extern "C" {
 
-#include "dawgdic/cdawgdic.h"
+#include "cdawgdic.h"
 
 void *dawgdic_dictionary_new() {
     return new Dictionary();

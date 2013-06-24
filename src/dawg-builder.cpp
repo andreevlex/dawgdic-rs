@@ -7,7 +7,7 @@ using namespace dawgdic;
 
 extern "C" {
 
-#include "dawgdic/cdawgdic.h"
+#include "cdawgdic.h"
 
 void *dawgdic_builder_new() {
     return new DawgBuilder();
