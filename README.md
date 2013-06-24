@@ -4,22 +4,18 @@ Pure C bindings to the dawgdic C++ library. This library allows you to
 use the DAWG data structure in your C applications and easily implement
 DAWGs in your favourite scripting language via FFI.
 
-## Building
-
-```shell
-git clone https://github.com/ustalov/libdawgdic.git
-mkdir libdawgdic/build
-cd libdawgdic/build
-cmake ..
-make
-```
-
 ## Installation
 
-```shell
-sudo make install
-sudo ldconfig
-```
+There are several necessary steps to compile and install libdawgdic into
+your system.
+
+1. Clone it with `git clone https://github.com/dmchk/libdawgdic.git`.
+2. Prepare the build directory with `mkdir libdawgdic/build`.
+3. Go to the build directory with `cd libdawgdic/build`.
+4. Configure it with `cmake ..`.
+5. Compile it with `make`.
+6. Install it with `sudo make install`.
+7. Reconfigure your runtime bindings with `sudo ldconfig`, if necessary.
 
 After that you may consider two new files in your system:
 `CMAKE_INSTALL_PREFIX/lib/libdawgdic.so` and
