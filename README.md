@@ -18,6 +18,7 @@ make
 
 ```shell
 sudo make install
+sudo ldconfig
 ```
 
 After that you may consider two new files in your system:
