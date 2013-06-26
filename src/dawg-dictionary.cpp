@@ -27,6 +27,14 @@ void dawgdic_dictionary_clear(const void *dict) {
     DICT(dict)->Clear();
 }
 
+void dawgdic_dictionary_shrink(const void *dict) {
+    DICT(dict)->Shrink();
+}
+
+void dawgdic_dictionary_swap(void *dict1, void *dict2) {
+    DICT(dict1)->Swap(DICT(dict2));
+}
+
 bool dawgdic_dictionary_fread(const void *dict, const char *filename) {
     ifstream file;
     file.open(filename, ios::binary);
@@ -49,8 +57,24 @@ bool dawgdic_dictionary_contains(const void *dict, const char *key) {
     return DICT(dict)->Contains(key);
 }
 
+bool dawgdic_dictionary_contains2(const void *dict, const char *key, const size_t length) {
+    return DICT(dict)->Contains(key, length);
+}
+
 int dawgdic_dictionary_find(const void *dict, const char *key) {
     return DICT(dict)->Find(key);
+}
+
+int dawgdic_dictionary_find2(const void *dict, const char *key, const size_t length) {
+    return DICT(dict)->Find(key, length);
+}
+
+bool dawgdic_dictionary_find3(const void *dict, const char *key, int *value) {
+    return DICT(dict)->Find(key, value);
+}
+
+bool dawgdic_dictionary_find4(const void *dict, const char *key, const size_t length, int *value) {
+    return DICT(dict)->Find(key, length, value);
 }
 
 bool dawgdic_dictionary_follow(const void *dict, const char label, unsigned int *index) {
