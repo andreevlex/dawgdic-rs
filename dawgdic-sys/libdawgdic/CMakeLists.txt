@@ -12,7 +12,7 @@ include_directories (${LIBDAWGDIC_BINARY_DIR}/include)
 include_directories (${LIBDAWGDIC_SOURCE_DIR}/lib)
 include_directories (${LIBDAWGDIC_BINARY_DIR}/lib)
 
-add_library(dawgdic SHARED
+add_library(dawgdic
   src/dawg.cpp
   src/dawg-builder.cpp
   src/dawg-dictionary.cpp

@@ -1,0 +1,15 @@
+[package]
+name = "dawgdic-sys"
+version = "0.1.0"
+authors = ["Ivan Moskalev <ivan.moskalev@gmail.com>"]
+description = "Bindgen-generated Rust bindings for dawgdic library"
+license = "MIT"
+repository = "https://github.com/ivanmoskalev/dawgdic-rs"
+build = "build.rs"
+
+[lib]
+path = "lib.rs"
+
+[build-dependencies]
+bindgen = "0.46"
+cmake = "0.1"

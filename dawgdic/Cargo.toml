@@ -1,0 +1,13 @@
+[package]
+name = "dawgdic"
+version = "0.1.0"
+authors = ["Ivan Moskalev <ivan.moskalev@gmail.com>"]
+description = "DAWG dictionary for Rust, based on dawgdic by Susumu Yata."
+license = "MIT"
+repository = "https://github.com/ivanmoskalev/dawgdic-rs"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+dawgdic-sys = { version = "0.2", path = "../dawgdic-sys" }
